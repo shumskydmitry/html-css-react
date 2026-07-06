@@ -1,9 +1,10 @@
 import {Container} from "../../layout/container/Container.tsx";
 import {SectionContent} from "../../layout/section-content/SectionContent.tsx";
+import {StyledFooter} from "@/sections/footer/Footer.styled.ts";
 
 export const Footer = () => {
     return (
-        <footer>
+        <StyledFooter>
             <Container>
                 <SectionContent>
                     <p>
@@ -11,6 +12,6 @@ export const Footer = () => {
                     </p>
                 </SectionContent>
             </Container>
-        </footer>
+        </StyledFooter>
     )
 }

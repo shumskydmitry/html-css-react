@@ -4,14 +4,10 @@ import {Section} from "@/layout/section/Section";
 import {SectionTitle} from "@/components/section-title/SectionTitle";
 import {SectionContent} from "@/layout/section-content/SectionContent";
 import {ContactsList} from "./Contacts.styled";
-import githubIcon from "@/assets/icons/github.svg";
-import instagramIcon from "@/assets/icons/instagram.svg";
-import emailIcon from "@/assets/icons/email.svg";
-import phoneIcon from "@/assets/icons/phone.svg";
 
 export const Contacts = () => {
     return (
-        <Section>
+        <Section anchor="contacts">
             <Container>
                 <SectionContent>
                     <SectionTitle>
@@ -19,16 +15,16 @@ export const Contacts = () => {
                     </SectionTitle>
                     <ContactsList>
                         <li>
-                            <ContactCard href="" icon={githubIcon} title="Github"/>
+                            <ContactCard href="" iconId="github" text="Github"/>
                         </li>
                         <li>
-                            <ContactCard href="" icon={instagramIcon} title="Instagram"/>
+                            <ContactCard href="" iconId="instagram" text="Instagram"/>
                         </li>
                         <li>
-                            <ContactCard href="" icon={emailIcon} title="Email"/>
+                            <ContactCard href="" iconId="email" text="Email"/>
                         </li>
                         <li>
-                            <ContactCard href="" icon={phoneIcon} title="Phone"/>
+                            <ContactCard href="" iconId="phone" text="Phone"/>
                         </li>
                     </ContactsList>
                 </SectionContent>

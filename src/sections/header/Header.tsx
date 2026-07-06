@@ -1,31 +1,33 @@
 import mainLogo from '../../assets/icons/main-logo.svg';
-import {List, Nav} from "./Header.styled";
+import {List, Nav, StyledHeader} from "./Header.styled";
 import {Container} from "../../layout/container/Container";
 import {NavLink} from "../../components/nav-link/NavLink.tsx";
 
 export const Header = () => {
     return (
-        <header>
+        <StyledHeader>
             <Container>
                 <Nav>
-                    <img src={mainLogo} alt="Главный логотип сайта"/>
+                    <a href="#">
+                        <img src={mainLogo} alt="Главный логотип сайта"/>
+                    </a>
                     <List>
                         <li>
-                            <NavLink href="#">Обо мне</NavLink>
+                            <NavLink href="#hero">Обо мне</NavLink>
                         </li>
                         <li>
-                            <NavLink href="#">Навыки</NavLink>
+                            <NavLink href="#skills">Навыки</NavLink>
                         </li>
                         <li>
-                            <NavLink href="#">Проекты</NavLink>
+                            <NavLink href="#projects">Проекты</NavLink>
                         </li>
                         <li>
-                            <NavLink href="#" variant="primary">Контакты</NavLink>
+                            <NavLink href="#contacts" variant="primary">Контакты</NavLink>
                         </li>
                     </List>
                 </Nav>
             </Container>
-        </header>
+        </StyledHeader>
     )
 }
 

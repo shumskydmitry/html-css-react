@@ -1,12 +1,18 @@
-import skillFrontEndImg from '../../../assets/images/skills/skill-front-end.svg'
 import {StyledSkillCard} from "./SkillCard.styled";
 
-export const SkillCard = () => {
+type SkillCardProps = {
+    src: string;
+    title: string;
+    alt: string;
+    text: string;
+}
+
+export const SkillCard = ({src, title, alt, text}: SkillCardProps) => {
    return (
        <StyledSkillCard>
-           <img src={skillFrontEndImg} alt=""/>
-           <h3>Некий навык</h3>
-           <p>Здесь находится подробное описание навыка, которое будет меняться от карточки к карточке.</p>
+           <img src={src} alt={alt}/>
+           <h3>{title}</h3>
+           <p>{text}</p>
        </StyledSkillCard>
    )
 }

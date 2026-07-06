@@ -1,14 +1,14 @@
 import heroImage from '../../assets/images/hero/hero-image.svg';
 import {Container} from "../../layout/container/Container";
 import {Section} from "../../layout/section/Section";
-import {HeroImage, HeroTitle, HeroWrapper} from "./Hero.styled";
+import {HeroImage, HeroTextWrapper, HeroTitle, HeroWrapper} from "./Hero.styled";
 
 export const Hero = () => {
     return (
-        <Section>
+        <Section anchor="hero">
             <Container>
                 <HeroWrapper>
-                    <div>
+                    <HeroTextWrapper>
                         <HeroTitle>
                             <span>Привет!</span><br/>
                             Я Дмитрий Шумский.<br/>
@@ -19,7 +19,7 @@ export const Hero = () => {
                             I am coding with a clean and beautiful problem
                             solving in mind.
                         </p>
-                    </div>
+                    </HeroTextWrapper>
                     <HeroImage src={heroImage} alt=""/>
                 </HeroWrapper>
             </Container>

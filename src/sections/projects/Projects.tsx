@@ -3,11 +3,14 @@ import {Container} from "../../layout/container/Container";
 import {Section} from "../../layout/section/Section";
 import {ProjectsList} from "./Projects.styled";
 import {SectionTitle} from "../../components/section-title/SectionTitle";
-import {SectionContent} from "../../layout/section-content/SectionContent.tsx";
+import {SectionContent} from "../../layout/section-content/SectionContent";
+import project1 from "@/assets/images/projects/sendpay.svg";
+import project2 from "@/assets/images/projects/e-commerce.svg";
+import project3 from "@/assets/images/projects/beats-learning.svg";
 
 export const Projects = () => {
     return (
-        <Section>
+        <Section anchor="projects">
             <Container>
                 <SectionContent>
                     <SectionTitle>
@@ -15,13 +18,13 @@ export const Projects = () => {
                     </SectionTitle>
                     <ProjectsList>
                         <li>
-                            <ProjectCard/>
+                            <ProjectCard href="#" src={project1} alt="Проект Sendpay"/>
                         </li>
                         <li>
-                            <ProjectCard/>
+                            <ProjectCard href="#" src={project2} alt="Проект E-commerce"/>
                         </li>
                         <li>
-                            <ProjectCard/>
+                            <ProjectCard href="#" src={project3} alt="Проект BeatsLearning"/>
                         </li>
                     </ProjectsList>
                 </SectionContent>

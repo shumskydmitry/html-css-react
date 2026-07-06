@@ -7,7 +7,3 @@ export const ProjectsList = styled.ul`
     align-items: center;
     gap: 50px;
 `
-export const StyledProjectCard = styled.article`
-    width: 347px;
-    min-height: 266px;
-`

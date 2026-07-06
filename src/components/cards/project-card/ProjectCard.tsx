@@ -1,13 +1,18 @@
-import skillFrontEndImg from '../../../assets/images/skills/skill-front-end.svg'
-import {StyledProjectCard} from "../../../sections/projects/Projects.styled.ts";
+import {ProjectCardImg, StyledProjectCard} from "@/components/cards/project-card/ProjectCard.styled.ts";
 
-export const ProjectCard = () => {
+type ProjectCardProps = {
+    href: string;
+    src: string;
+    alt: string;
+}
+
+export const ProjectCard = ({href, src, alt}: ProjectCardProps) => {
     return (
-        <StyledProjectCard>
-            <a href="#">
-                <img src={skillFrontEndImg} alt=""/>
-            </a>
+        <StyledProjectCard href={href}>
+            <ProjectCardImg src={src} alt={alt}/>
         </StyledProjectCard>
     )
 }
+
+
 

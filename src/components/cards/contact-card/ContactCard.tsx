@@ -1,32 +1,26 @@
-import styled from "styled-components";
+import {
+    ContactCardDescription,
+    ContactCardImgWrapper,
+    StyledContactCard
+} from "@/components/cards/contact-card/ContactCard.styled.ts";
+import {Icon} from "@/components/icon/Icon.tsx";
 
 type ContactCardProps = {
     href: string,
-    icon: string,
-    title: string
+    iconId: string,
+    text: string
 }
 
-export const ContactCard = ({href, icon, title}: ContactCardProps) => {
+export const ContactCard = ({href, iconId, text}: ContactCardProps) => {
     return (
         <StyledContactCard href={href}>
-            <div>
-                <img src={icon} alt={title}/>
-                <p>
-                    {title}
-                </p>
-            </div>
+            <ContactCardImgWrapper>
+                <Icon iconId={iconId}/>
+            </ContactCardImgWrapper>
+            <ContactCardDescription>
+                {text}
+            </ContactCardDescription>
         </StyledContactCard>
     )
 }
 
-const StyledContactCard = styled.a`
-    div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        //width: 240px;
-        min-height: 236px;
-    }
-`
